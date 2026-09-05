@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import profileImg from "../../../../scaleup project.png"
+import profileImg from "../../../scaleup project.png"
 import { Button } from "@/components/ui/button"
 
 export default function ScaleUpCaseStudy() {
