@@ -19,14 +19,32 @@ export function ContactSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [formState, setFormState] = useState({ name: "", email: "", message: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setFormState({ name: "", email: "", message: "" })
-    alert("Message sent! I'll get back to you soon.")
+    setSubmitStatus("idle")
+    try {
+      const response = await fetch("https://formspree.io/f/xoeqnazl", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(formState),
+      })
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormState({ name: "", email: "", message: "" })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch {
+      setSubmitStatus("error")
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -178,6 +196,25 @@ export function ContactSection() {
                     </>
                   )}
                 </Button>
+
+                {submitStatus === "success" && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-sm font-medium text-emerald-600 text-center"
+                  >
+                    Message sent! I&apos;ll get back to you soon. ✓
+                  </motion.p>
+                )}
+                {submitStatus === "error" && (
+                  <motion.p
+                    initial={{ opacity: 0, y: 4 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="text-sm font-medium text-red-500 text-center"
+                  >
+                    Something went wrong — please try again or email me directly.
+                  </motion.p>
+                )}
               </form>
             </motion.div>
           </div>

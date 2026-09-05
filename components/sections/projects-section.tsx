@@ -15,6 +15,7 @@ import colocataireImg from "../../colocataire.png"
 import maratechImg from "../../maratech.png"
 import takwiraImg from "../../takwira.png"
 import greenandgoImg from "../../greenandgo.png"
+import departImg from "../../depart.jpg"
 
 const projects = [
   {
@@ -109,6 +110,16 @@ const projects = [
     demo: "#",
     metrics: "Full Stack Web",
     color: "from-pink-400 to-rose-500",
+  },
+  {
+    title: "Dep'Art — Creative Community Platform",
+    description: "A bilingual (FR/EN) community platform for artistic creation, organized into 7 \"Creative Worlds\" spanning 19 disciplines — painting, crochet, photography, music, podcast, writing, digital art, jewelry, fashion and more. Built with Django, with real community features (likes, comments, saves), live API integrations (Open Library, Apple Podcasts), and a strict no-fake-data honesty principle throughout.",
+    image: departImg,
+    technologies: ["Django", "Python", "HTML/CSS/JS", "REST APIs"],
+    github: "#",
+    demo: "#",
+    metrics: "In Development",
+    color: "from-fuchsia-500 to-purple-500",
   },
 ]
 
@@ -219,16 +230,20 @@ export function ProjectsSection() {
                       {project.title}
                     </h3>
                     <div className="flex gap-1">
-                      <Button size="sm" variant="ghost" className="h-8 w-8 p-0 rounded-full hover:bg-purple-50" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4" />
-                        </a>
-                      </Button>
-                      <Button size="sm" variant="ghost" className="h-8 w-8 p-0 rounded-full hover:bg-orange-50" asChild>
-                        <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </Button>
+                      {project.github !== "#" && (
+                        <Button size="sm" variant="ghost" className="h-8 w-8 p-0 rounded-full hover:bg-purple-50" asChild>
+                          <a href={project.github} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
+                      {project.demo !== "#" && (
+                        <Button size="sm" variant="ghost" className="h-8 w-8 p-0 rounded-full hover:bg-orange-50" asChild>
+                          <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      )}
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{project.description}</p>
