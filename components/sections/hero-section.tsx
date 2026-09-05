@@ -7,7 +7,7 @@ import Image from "next/image"
 import profileImg from "../../Gemini_Generated_Image_eg9v14eg9v14eg9v.png"
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 lg:pt-32">
+    <section className="relative min-h-screen flex items-start justify-center overflow-hidden pt-28 sm:pt-32 lg:pt-36 pb-16">
       {/* Animated background blobs - purple and coral */}
       <div className="absolute inset-0 bg-background overflow-hidden">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-br from-purple-400/30 to-violet-500/20 rounded-full blur-3xl animate-blob" />
@@ -122,9 +122,9 @@ export function HeroSection() {
                 className="rounded-full px-6 py-6 text-base hover:bg-orange-50 transition-all duration-300"
                 asChild
               >
-                <a href="/cv.pdf" download>
+                <a href="/cv.pdf" target="_blank" rel="noreferrer">
                   <FileText className="w-5 h-5 mr-2 text-orange-500" />
-                  Download CV
+                  View CV
                 </a>
               </Button>
             </motion.div>

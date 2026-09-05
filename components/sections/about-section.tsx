@@ -6,13 +6,13 @@ import { useRef } from "react"
 import { Brain, Code, Cpu, Smartphone } from "lucide-react"
 
 const skills = [
-  { icon: Code, label: "Python", description: "", color: "from-purple-500 to-violet-500" },
-  { icon: Cpu, label: "TensorFlow/PyTorch", description: "", color: "from-indigo-500 to-blue-500" },
-  { icon: Code, label: "React", description: "", color: "from-pink-500 to-rose-500" },
-  { icon: Code, label: "FastAPI/Django", description: "", color: "from-emerald-400 to-green-500" },
-  { icon: Brain, label: "LLMs / RAG", description: "", color: "from-yellow-400 to-amber-500" },
-  { icon: Cpu, label: "Computer Vision", description: "", color: "from-orange-400 to-amber-500" },
-  { icon: Brain, label: "ML", description: "", color: "from-violet-500 to-purple-600" },
+  { icon: Code, label: "Python", description: "Core language for ML & backend", color: "from-purple-500 to-violet-500" },
+  { icon: Cpu, label: "TensorFlow/PyTorch", description: "Deep learning model development", color: "from-indigo-500 to-blue-500" },
+  { icon: Code, label: "React", description: "Modern frontend interfaces", color: "from-pink-500 to-rose-500" },
+  { icon: Code, label: "FastAPI/Django", description: "Scalable backend APIs", color: "from-emerald-400 to-green-500" },
+  { icon: Brain, label: "LLMs / RAG", description: "Generative AI & retrieval systems", color: "from-yellow-400 to-amber-500" },
+  { icon: Cpu, label: "Computer Vision", description: "Image & video intelligence", color: "from-orange-400 to-amber-500" },
+  { icon: Brain, label: "ML", description: "Predictive models & data science", color: "from-violet-500 to-purple-600" },
 ]
 
 export function AboutSection() {
@@ -63,6 +63,24 @@ export function AboutSection() {
                     {s}
                   </span>
                 ))}
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.16 }}
+                className="text-sm text-muted-foreground"
+              >
+                <span className="font-semibold text-foreground/80">Languages:</span> Arabic (Native) &bull; French &bull; English
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-sm text-muted-foreground mt-2"
+              >
+                <span className="font-semibold text-foreground/80">Soft Skills:</span> Teamwork &amp; Collaboration &bull; Project Management &bull; Time Management &bull; Networking
               </motion.div>
             </div>
 

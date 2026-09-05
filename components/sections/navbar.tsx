@@ -44,7 +44,7 @@ export function Navbar() {
             <nav className="flex items-center justify-between">
               {/* Logo */}
               <a href="#" className="text-xl font-bold flex items-center gap-3 tracking-tight">
-                <span className="gradient-text">Dina — AI</span>
+                <span className="gradient-text">Dina Charfi</span>
                 <Sparkles className="w-4 h-4 text-[var(--brand-orange)]" />
               </a>
 

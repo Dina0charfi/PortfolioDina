@@ -10,7 +10,7 @@ export default function ScaleUpCaseStudy() {
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-8">
           <h1 className="text-4xl font-bold">ScaleUp — Startup Intelligence</h1>
-          <p className="text-muted-foreground mt-2">Currently Building — Featured</p>
+          <p className="text-muted-foreground mt-2">University Project — Featured</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
@@ -28,10 +28,10 @@ export default function ScaleUpCaseStudy() {
             </div>
 
             <div className="flex gap-3">
-              <Button asChild size="md" className="gradient-accent text-white rounded-full px-4 py-2">
+              <Button asChild size="default" className="gradient-accent text-white rounded-full px-4 py-2">
                 <a href="#" target="_blank" rel="noreferrer">View Project</a>
               </Button>
-              <Button asChild size="md" variant="outline" className="rounded-full px-4 py-2">
+              <Button asChild size="default" variant="outline" className="rounded-full px-4 py-2">
                 <a href="https://github.com/Dina0charfi/scaleup" target="_blank" rel="noreferrer">GitHub</a>
               </Button>
             </div>

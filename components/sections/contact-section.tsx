@@ -44,7 +44,7 @@ export function ContactSection() {
         >
           {/* Section header */}
           <div className="flex items-center gap-4 mb-16">
-            <span className="text-purple-500 font-mono text-sm font-semibold">07</span>
+            <span className="text-purple-500 font-mono text-sm font-semibold">06</span>
             <h2 className="text-3xl md:text-4xl font-bold">
               <span className="gradient-text">Get in Touch</span>
             </h2>

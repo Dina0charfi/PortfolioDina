@@ -3,17 +3,22 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Award, Briefcase, GraduationCap, Laptop, Wrench, Smartphone, Globe } from "lucide-react"
+import { Award, Briefcase, GraduationCap, Laptop, Wrench, Smartphone, Globe, ShieldCheck } from "lucide-react"
 
 const timelineItems = [
-  { year: "2026–Present", title: "ScaleUp — Startup Intelligence (Current)", description: "Leading product and ML engineering for an AI startup: pitch-deck gen, RAG, CV & speech intelligence.", type: "startup", icon: Briefcase, current: true },
+  { year: "Jul–Aug 2026", title: "Hydatis Internship — CyberAware", description: "Built CyberAware, a portfolio of 5 interconnected cybersecurity AI agents (phishing, DNS threats, data-leak monitoring, insider-threat detection, incident response) plus a Serious Game, with ML models, SHAP explainability and LLM integrations.", type: "internship", icon: ShieldCheck },
+  { year: "2026", title: "ScaleUp — Startup Intelligence", description: "University project: product and ML engineering for an AI startup platform — pitch-deck gen, RAG, CV & speech intelligence.", type: "startup", icon: Briefcase },
+  { year: "Feb 2026", title: "MaraTech Hackathon — ESPRIT", description: "42-hour accessible-web hackathon at ESPRIT: built a sign-language learning mode for the Accessibility App, in partnership with local associations.", type: "achievement", icon: Award },
   { year: "2025", title: "AI Project for French Associations", description: "ML systems, ETL, SQL warehousing and Power BI for analytics.", type: "work", icon: Briefcase },
   { year: "2025", title: "Animal Social AI Platform", description: "Django full-stack with deep learning breed classification and AI assistant.", type: "work", icon: Laptop },
   { year: "2025", title: "Colocation Mobile App", description: "Roommate/shared housing mobile product (FlutterFlow).", type: "work", icon: Smartphone },
-  { year: "2024", title: "Bigeek Internship", description: "Production training center website and tooling.", type: "internship", icon: Briefcase },
+  { year: "2024", title: "Bigeek Internship", description: "Built the training center's website using HTML, CSS and JavaScript only.", type: "internship", icon: Briefcase },
+  { year: "2024", title: "STB Bank — Summer Internship", description: "First-year internship: gained hands-on IT and banking experience.", type: "internship", icon: Briefcase },
   { year: "2024", title: "Smart Agriculture Marketplace", description: "Marketplace platform for agri-products.", type: "work", icon: Globe },
   { year: "2024", title: "Smart Football IoT", description: "IoT & Arduino sensors for sports analytics.", type: "work", icon: Wrench },
   { year: "2023", title: "SDL Game Project", description: "Game development project using SDL and C++.", type: "work", icon: Laptop },
+  { year: "Ongoing", title: "Engineering Degree in Artificial Intelligence", description: "ESPRIT — AI Engineering program.", type: "education", icon: GraduationCap },
+  { year: "2023", title: "Mathematics Baccalaureate", description: "High school diploma, Mathematics track.", type: "education", icon: GraduationCap },
 ]
 
 const typeColors = {

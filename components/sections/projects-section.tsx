@@ -3,11 +3,18 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { ExternalLink, Github, Rocket, Star } from "lucide-react"
+import { ExternalLink, Github, Gamepad2, Sprout } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import profileImg from "../../Gemini_Generated_Image_eg9v14eg9v14eg9v.png"
 import scaleupImg from "../../scaleup project.png"
+import napolienassoImg from "../../napolienasso.png"
+import animalappImg from "../../animalapp.png"
+import hydatisImg from "../../hydatis.png"
+import colocataireImg from "../../colocataire.png"
+import maratechImg from "../../maratech.png"
+import takwiraImg from "../../takwira.png"
+import greenandgoImg from "../../greenandgo.png"
 
 const projects = [
   {
@@ -17,14 +24,14 @@ const projects = [
     technologies: ["FastAPI","Python","TensorFlow","PyTorch","RAG","LLM APIs"],
     github: "https://github.com/Dina0charfi/scaleup",
     demo: "#",
-    metrics: "Currently Building",
+    metrics: "University Project",
     featured: true,
     color: "from-purple-600 to-violet-600",
   },
   {
     title: "Animal Social Network",
     description: "Full-stack social network platform with ML/DL APIs for recommendations. Built MobileNet model to classify animal breeds (cats and dogs). Applied Scrum/Agile methodologies.",
-    image: "/projects/animal-social.jpg",
+    image: animalappImg,
     technologies: ["Django", "MobileNet", "Deep Learning", "ML APIs", "PostgreSQL"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -32,19 +39,9 @@ const projects = [
     color: "from-pink-500 to-rose-500",
   },
   {
-    title: "AI for French Associations",
-    description: "ML models integrated into Django apps for intelligent prediction and automation. SQL data warehousing, ETL pipelines, and Power BI dashboards for business analytics.",
-    image: "/projects/associations-ai.jpg",
-    technologies: ["Python", "Django", "ML", "SQL", "Power BI", "ETL"],
-    github: "https://github.com/Dina0charfi",
-    demo: "#",
-    metrics: "Business Intelligence",
-    color: "from-orange-400 to-amber-500",
-  },
-  {
     title: "FlutterFlow Mobile App",
     description: "Mobile application with custom UI screens, backend service integration, authentication, navigation, and API connections.",
-    image: "/projects/flutterflow.jpg",
+    image: colocataireImg,
     technologies: ["FlutterFlow", "Firebase", "REST APIs", "UI/UX"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -52,9 +49,29 @@ const projects = [
     color: "from-violet-500 to-purple-600",
   },
   {
-    title: "Smart Football",
-    description: "Desktop application for football management using C++ and Qt. Integrated Oracle database and Arduino sensors for interactive motion features.",
-    image: "/projects/smart-football.jpg",
+    title: "CyberAware — Cybersecurity AI Agents",
+    description: "Portfolio of 5 interconnected cybersecurity AI agents built during my internship at Hydatis: DarkWatch (data-leak monitoring), NetScope (DNS threat detection), PhishHunter (agentic phishing detection), Sentinel (insider-threat detection) and CrisisBot (automated incident response), plus a Serious Game for security awareness training.",
+    image: hydatisImg,
+    technologies: ["FastAPI", "LightGBM", "Word2Vec", "Isolation Forest", "SHAP", "Groq LLM"],
+    github: "https://github.com/Dina0charfi",
+    demo: "#",
+    metrics: "Cybersecurity + AI",
+    color: "from-emerald-500 to-teal-500",
+  },
+  {
+    title: "AI for French Associations",
+    description: "ML models integrated into Django apps for intelligent prediction and automation. SQL data warehousing, ETL pipelines, and Power BI dashboards for business analytics.",
+    image: napolienassoImg,
+    technologies: ["Python", "Django", "ML", "SQL", "Power BI", "ETL"],
+    github: "https://github.com/Dina0charfi",
+    demo: "#",
+    metrics: "Business Intelligence",
+    color: "from-orange-400 to-amber-500",
+  },
+  {
+    title: "Takwira — Smart Football",
+    description: "Desktop application (\"Takwira\") for football management using C++ and Qt: ticketing with QR codes, matches, teams, players and referees. Integrated Oracle database and Arduino sensors for interactive motion features.",
+    image: takwiraImg,
     technologies: ["C++", "Qt", "Oracle", "Arduino", "IoT"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -63,8 +80,8 @@ const projects = [
   },
   {
     title: "Accessibility App",
-    description: "Mobile app for people with hearing impairments, built during ESPRIT Workshop. Focus on accessibility and inclusive design.",
-    image: "/projects/accessibility.jpg",
+    description: "Mobile app for people with hearing impairments, built during the MaraTech accessibility hackathon at ESPRIT. Focus on a sign-language learning mode and inclusive design.",
+    image: maratechImg,
     technologies: ["Mobile Dev", "Accessibility", "UI/UX", "Figma"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -75,6 +92,7 @@ const projects = [
     title: "SDL Game Project",
     description: "Classic games developed using SDL on Linux with C++ programming. Designed game graphics and interfaces using Adobe Design tools.",
     image: "/projects/sdl-game.jpg",
+    icon: Gamepad2,
     technologies: ["C++", "SDL", "Linux", "Adobe Design", "Game Dev"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -84,7 +102,8 @@ const projects = [
   {
     title: "Web Agriculture Project",
     description: "Interactive website with database integration for dynamic content and data management. Built using HTML, CSS, JavaScript, PHP.",
-    image: "/projects/agriculture.jpg",
+    image: greenandgoImg,
+    icon: Sprout,
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     github: "https://github.com/Dina0charfi",
     demo: "#",
@@ -134,7 +153,7 @@ export function ProjectsSection() {
                   <div className="relative h-full w-full rounded-xl overflow-hidden">
                     <Image src={projects[0].image} alt="ScaleUp preview" fill className="object-cover shadow-inner opacity-95" />
                   </div>
-                  <div className="absolute top-6 left-6 px-3 py-1 rounded-full bg-white/95 text-[0.75rem] font-semibold border">Currently Building</div>
+                  <div className="absolute top-6 left-6 px-3 py-1 rounded-full bg-white/95 text-[0.75rem] font-semibold border">{projects[0].metrics}</div>
                 </div>
 
                 {/* right - details */}
@@ -181,12 +200,18 @@ export function ProjectsSection() {
                 className="group bg-white rounded-2xl overflow-hidden shadow-lg shadow-purple-100/30 border border-purple-50 hover:shadow-xl hover:shadow-purple-200/40 hover:-translate-y-2 transition-all duration-500"
               >
                 <div className={`relative aspect-video bg-gradient-to-br ${project.color} overflow-hidden`}>
-                  <div className="absolute inset-0 bg-white/10" />
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-16 h-16 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Code className="w-8 h-8 text-white" />
-                    </div>
-                  </div>
+                  {typeof project.image === "string" ? (
+                    <>
+                      <div className="absolute inset-0 bg-white/10" />
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="w-16 h-16 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          {project.icon ? <project.icon className="w-8 h-8 text-white" /> : <Code className="w-8 h-8 text-white" />}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Image src={project.image} alt={project.title} fill className="object-cover" />
+                  )}
                 </div>
                 <div className="p-6">
                   <div className="flex items-start justify-between mb-3">
