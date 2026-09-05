@@ -212,7 +212,7 @@ export function ContactSection() {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-sm font-medium text-red-500 text-center"
                   >
-                    Something went wrong — please try again or email me directly.
+                    Something went wrong. Please try again or email me directly.
                   </motion.p>
                 )}
               </form>

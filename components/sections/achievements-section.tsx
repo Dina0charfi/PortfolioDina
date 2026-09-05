@@ -37,7 +37,7 @@ const certifications = [
   },
   {
     icon: Award,
-    title: "MaraTech — Accessible Web Hackathon",
+    title: "MaraTech: Accessible Web Hackathon",
     issuer: "ESPRIT",
     year: "Feb 2026",
     short: "42-hour hackathon building accessible digital solutions for associations",

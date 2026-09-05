@@ -9,8 +9,8 @@ export default function ScaleUpCaseStudy() {
     <main className="min-h-screen bg-background py-20">
       <div className="max-w-5xl mx-auto px-6">
         <div className="mb-8">
-          <h1 className="text-4xl font-bold">ScaleUp — Startup Intelligence</h1>
-          <p className="text-muted-foreground mt-2">University Project — Featured</p>
+          <h1 className="text-4xl font-bold">ScaleUp: Startup Intelligence</h1>
+          <p className="text-muted-foreground mt-2">University Project • Featured</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">
